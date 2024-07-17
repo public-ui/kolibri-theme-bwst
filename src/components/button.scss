@@ -6,7 +6,7 @@
 	}
 
 	:is(a, button) > .kol-span-wc {
-		font-weight: 400;
+		font-weight: var(--button-font-weight);
 		border-radius: var(--border-radius);
 		border-style: solid;
 		border-width: var(--border-width);
