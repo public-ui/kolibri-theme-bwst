@@ -20,8 +20,9 @@
 
 	.kol-input label {
 		order: 2;
-		font-size: 0.9rem;
-		font-weight: 700;
+		font-size: var(--label-size);
+		font-weight: var(--label-weight);
+		color: var(--label-color);
 	}
 
 	.kol-input .input {
