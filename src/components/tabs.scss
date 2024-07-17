@@ -37,7 +37,7 @@
 			color: var(--color-light);
 			background-color: var(--color-primary-variant);
 			border-color: var(--color-primary-variant);
-			box-shadow: var(--box-shadow-inputs);
+			box-shadow: 0 2px 8px 2px rgba(8, 35, 48, 0.24);
 		}
 	}
 
@@ -55,14 +55,12 @@
 		border-bottom-left-radius: 0;
 		position: relative;
 		top: var(--border-width);
-		&:focus-within{
+	/*	&:focus-within{
 			outline-color: var(--color-primary-variant);
 			outline-offset: 2px;
 			outline-style: solid;
 			outline-width: 2px;
-			background-color: var(--color-primary-focus);
-			color: var(--color-light);
-		}
+		}*/
 	}
 
 	*[tabindex]:is(.kol-button-group-wc button.selected){

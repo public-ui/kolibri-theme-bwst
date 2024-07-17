@@ -1,11 +1,7 @@
 @layer kol-theme-component {
-
-	:host{
-		font-family: var(--font-family);
-	}
-
 	details > summary {
 		border-radius: calc(var(--border-radius) / 2);
+		font-family: var(--font-family);
 	}
 
 	details > summary > span{
