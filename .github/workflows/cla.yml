@@ -8,7 +8,7 @@ on:
 
 jobs:
   cla:
-    if: github.repository == 'public-ui/kolibri'
+    if: github.repository == 'public-ui/kolibri-theme-bwst'
     runs-on: ubuntu-latest
     steps:
       - name: 'CLA Assistant'
