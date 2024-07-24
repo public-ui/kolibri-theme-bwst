@@ -1,6 +1,5 @@
 @layer kol-theme-component {
-
-	:host{
+	:host {
 		font-family: var(--font-family);
 	}
 
@@ -8,7 +7,7 @@
 		border-radius: calc(var(--border-radius) / 2);
 	}
 
-	details > summary > span{
+	details > summary > span {
 		border-bottom-color: var(--color-subtle);
 	}
 
@@ -18,8 +17,8 @@
 		border-bottom-color: var(--color-primary);
 	}
 
-	details{
-		.content{
+	details {
+		.content {
 			padding: 0.25rem;
 		}
 	}

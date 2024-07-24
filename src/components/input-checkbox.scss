@@ -23,10 +23,9 @@
 		min-height: var(--a11y-min-size);
 		gap: 0.4rem;
 
-		.hint{
+		.hint {
 			font-size: 0.9rem;
 		}
-
 	}
 
 	:host .kol-input.default {
@@ -286,7 +285,7 @@
 	.kol-input:not(.checkbox.switch, .radio) .input:focus,
 	.kol-input:not(.checkbox) .input:focus,
 	.kol-input:is(.checkbox.switch, .radio) input:focus,
-	.kol-input:is(.checkbox) input:focus{
+	.kol-input:is(.checkbox) input:focus {
 		cursor: pointer;
 		outline-color: var(--color-primary-variant);
 		outline-offset: 2px;
@@ -294,7 +293,4 @@
 		outline-width: 2px;
 		transition: outline-offset 0.2s linear;
 	}
-
-
-
 }
