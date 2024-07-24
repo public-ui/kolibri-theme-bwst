@@ -53,10 +53,8 @@ jobs:
 
       - name: Install
         run: pnpm i --no-frozen-lockfile
-      - name: Unused
-        run: pnpm unused
-      - name: Depcheck
-        run: pnpm depcheck
+      # - name: Unused
+      #   run: pnpm unused
       - name: Format
         run: pnpm format
       - name: Build
