@@ -12,8 +12,8 @@
 		"prepack": "pnpm build",
 		"start": "npm-run-all --parallel dev serve",
 		"serve": "sh serve.sh",
-		"xtest": "THEME_MODULE=dist THEME_EXPORT=BWSt kolibri-visual-test",
-		"xtest-update": "THEME_MODULE=dist THEME_EXPORT=BWSt kolibri-visual-test --update-snapshots theme-snapshots.spec.js",
+		"test": "THEME_MODULE=dist THEME_EXPORT=BWSt kolibri-visual-test",
+		"test-update": "THEME_MODULE=dist THEME_EXPORT=BWSt kolibri-visual-test --update-snapshots theme-snapshots.spec.js",
 		"pretest": "pnpm build",
 		"pretest-update": "pnpm build",
 		"update": "ncu -t minor -u && ncu"
