@@ -1,24 +1,23 @@
 @layer kol-theme-global {
-
 	:root {
 		--blue: #6495ed;
 		--white: #faf0e6;
 	}
 
-	:root { background-color: var(--blue); }
-
-
+	:root {
+		background-color: var(--blue);
+	}
 
 	:host {
 		--page-bg: #ffffff;
-		--input-field-bg: rgba(237, 240, 241, .3);
-		--border-radius:  4px;
+		--input-field-bg: rgba(237, 240, 241, 0.3);
+		--border-radius: 4px;
 		--font-family: Arial, helvetica, sans-serif;
 		--font-size: 16px;
 		--spacing: 0.25rem;
-		--border-width:  1px;
+		--border-width: 1px;
 		--color-primary: #156570;
-		--color-primary-light:  #1a7a87;
+		--color-primary-light: #1a7a87;
 		--color-primary-variant: #207a8b;
 		--color-danger: #ca0101;
 		--color-warning: #c44931;
@@ -31,10 +30,7 @@
 		--visited: var(--color-primary-light);
 		--border-color: #ededed;
 		--a11y-min-size: 44px;
-
 	}
-
-
 
 	:host {
 		/* Reset global background-color defined by components */
@@ -45,8 +41,6 @@
 		box-sizing: border-box;
 	}
 
-
-
 	h1,
 	h2,
 	h3,
@@ -56,7 +50,6 @@
 		margin: 0;
 		padding: 0;
 	}
-
 
 	*[tabindex]:focus-visible,
 	.kol-input:not(.checkbox, .radio) .input:focus-within,
@@ -69,7 +62,6 @@
 		outline-width: 2px;
 		transition: outline-offset 0.2s linear;
 	}
-
 
 	.kol-heading-wc {
 		font-weight: 700;
@@ -99,7 +91,8 @@
 		gap: 0.5rem;
 	}
 
-	a:is(:focus, :hover):not([aria-disabled]), button:is(:focus, :hover):not([disabled]) {
+	a:is(:focus, :hover):not([aria-disabled]),
+	button:is(:focus, :hover):not([disabled]) {
 		text-decoration-thickness: calc(1rem / 8);
 	}
 
@@ -115,9 +108,7 @@
 }
 
 @layer kol-component {
-
-	input:not([type="checkbox"],
-	[type="radio"]),
+	input:not([type='checkbox'], [type='radio']),
 	select:not([multiple], [size]) {
 		height: 2.75rem;
 		border-radius: var(--border-radius);
