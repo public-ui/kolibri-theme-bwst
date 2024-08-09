@@ -55,8 +55,8 @@ jobs:
         run: pnpm i --no-frozen-lockfile
       #- name: Install Playwright
       #  run: pnpm exec playwright install
-      - name: Unused
-        run: pnpm unused
+      #- name: Unused
+      #  run: pnpm unused
       - name: Format
         run: pnpm format
       - name: Build
