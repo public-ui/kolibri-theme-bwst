@@ -1,12 +1,9 @@
-
 @layer kol-theme-global {
-
 	:root {
 		--blue: #6495ed;
 		--white: #faf0e6;
 		background-color: var(--blue);
 	}
-
 
 	:host {
 		--label-weight: 700;
@@ -15,15 +12,15 @@
 		--box-shadow-inputs: 0px 2px 8px 2px rgba(8, 35, 48, 0.24);
 		--page-bg: #ffffff;
 		--element-bg: #eee;
-		--border-radius:  4px;
+		--border-radius: 4px;
 		--font-family: Calibri, Arial, helvetica, sans-serif;
 		--font-size: 16px;
 		--spacing: 0.25rem;
-		--border-width:  1px;
+		--border-width: 1px;
 		--color-primary: #156570;
-		--color-primary-light:  #1a7a87;
+		--color-primary-light: #1a7a87;
 		--color-primary-variant: #207a8b;
-		--color-primary-focus: hsl(from var(--color-primary-variant) h calc(s - 10) l );
+		--color-primary-focus: hsl(from var(--color-primary-variant) h calc(s - 10) l);
 		--color-danger: #ca0101;
 		--color-warning: #c44931;
 		--color-success: #005c45;
@@ -38,7 +35,6 @@
 		--button-font-weight: 400;
 	}
 
-
 	:host {
 		/* Reset global background-color defined by components */
 		background-color: transparent;
@@ -47,8 +43,6 @@
 	* {
 		box-sizing: border-box;
 	}
-
-
 
 	h1,
 	h2,
@@ -59,7 +53,6 @@
 		margin: 0;
 		padding: 0;
 	}
-
 
 	*[tabindex]:focus-visible,
 	button[tabindex]:focus,
@@ -73,7 +66,6 @@
 		outline-width: 2px;
 		transition: outline-offset 0.2s linear;
 	}
-
 
 	.kol-heading-wc {
 		font-weight: 700;
@@ -103,7 +95,8 @@
 		gap: 0.5rem;
 	}
 
-	a:is(:focus, :hover):not([aria-disabled]), button:is(:focus, :hover):not([disabled]) {
+	a:is(:focus, :hover):not([aria-disabled]),
+	button:is(:focus, :hover):not([disabled]) {
 		text-decoration-thickness: calc(1rem / 8);
 	}
 
@@ -119,13 +112,10 @@
 }
 
 @layer kol-component {
-
-	input:not([type="checkbox"],
-	[type="radio"]),
+	input:not([type='checkbox'], [type='radio']),
 	select:not([multiple], [size]) {
 		height: 2.75rem;
 		border-radius: var(--border-radius);
 		border-width: var(--border-width);
 	}
-
 }
