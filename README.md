@@ -111,4 +111,29 @@ Um die _Design Tokens_ anzupassen, reicht ein einfaches Stylesheet, das die gewÃ
 }
 ```
 
+```html
 
+<!doctype html>
+<html lang="de" dir="ltr">
+	<head>
+		<title>Code-Samples | KoliBri â€“ Public UI</title>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Webanwendung mit der KoliBri-Komponentenbibliothek." />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="shortcut icon" type="image/x-icon" href="assets/kolibri.ico" />
+
+		<link rel="stylesheet" href="assets/codicons/codicon.css" />
+	<!---	<link rel="stylesheet" href="assets/fontawesome-free/css/all.min.css" />-->
+		<link rel="stylesheet" href="assets/noto-sans/noto-sans.css" />
+		<link rel="stylesheet" href="main.css" />
+		<meta name="robots" content="noindex" />
+		<meta name="kolibri" content="dev-mode=false;experimental-mode=true;" />
+	</head>
+	<body>
+		<div id="app"></div>
+		<script async src="main.js"></script>
+		<noscript>Diese Webseite erfordert, dass Sie JavaScript aktivieren.</noscript>
+	</body>
+</html>
+
+```
