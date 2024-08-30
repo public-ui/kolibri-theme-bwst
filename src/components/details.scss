@@ -4,7 +4,7 @@
 		font-family: var(--font-family);
 	}
 
-	details > summary > span{
+	details > summary > span {
 		border-bottom-color: var(--color-subtle);
 	}
 
@@ -14,8 +14,8 @@
 		border-bottom-color: var(--color-primary);
 	}
 
-	details{
-		.content{
+	details {
+		.content {
 			padding: 0.25rem;
 		}
 	}
