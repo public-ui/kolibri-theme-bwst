@@ -1,25 +1,26 @@
 @layer kol-theme-global {
-
 	:root {
 		--blue: #6495ed;
 		--white: #faf0e6;
+		background-color: var(--blue);
 	}
 
-	:root { background-color: var(--blue); }
-
-
-
 	:host {
+		--label-weight: 700;
+		--label-size: 0.9rem;
+		--label-color: #000000;
+		--box-shadow-inputs: 0px 2px 8px 2px rgba(8, 35, 48, 0.24);
 		--page-bg: #ffffff;
-		--input-field-bg: rgba(237, 240, 241, .3);
-		--border-radius:  4px;
-		--font-family: Arial, helvetica, sans-serif;
+		--element-bg: #eee;
+		--border-radius: 4px;
+		--font-family: "Noto Sans Regular", Arial, helvetica, sans-serif;
 		--font-size: 16px;
 		--spacing: 0.25rem;
-		--border-width:  1px;
+		--border-width: 1px;
 		--color-primary: #156570;
-		--color-primary-light:  #1a7a87;
+		--color-primary-light: #1a7a87;
 		--color-primary-variant: #207a8b;
+		--color-primary-focus: hsl(from var(--color-primary-variant) h calc(s - 10) l);
 		--color-danger: #ca0101;
 		--color-warning: #c44931;
 		--color-success: #005c45;
@@ -31,10 +32,8 @@
 		--visited: var(--color-primary-light);
 		--border-color: #ededed;
 		--a11y-min-size: 44px;
-
+		--button-font-weight: 400;
 	}
-
-
 
 	:host {
 		/* Reset global background-color defined by components */
@@ -44,8 +43,6 @@
 	* {
 		box-sizing: border-box;
 	}
-
-
 
 	h1,
 	h2,
@@ -57,8 +54,8 @@
 		padding: 0;
 	}
 
-
 	*[tabindex]:focus-visible,
+	button[tabindex]:focus,
 	.kol-input:not(.checkbox, .radio) .input:focus-within,
 	.kol-input:is(.checkbox, .radio) input:focus,
 	summary:focus {
@@ -69,7 +66,6 @@
 		outline-width: 2px;
 		transition: outline-offset 0.2s linear;
 	}
-
 
 	.kol-heading-wc {
 		font-weight: 700;
@@ -99,7 +95,8 @@
 		gap: 0.5rem;
 	}
 
-	a:is(:focus, :hover):not([aria-disabled]), button:is(:focus, :hover):not([disabled]) {
+	a:is(:focus, :hover):not([aria-disabled]),
+	button:is(:focus, :hover):not([disabled]) {
 		text-decoration-thickness: calc(1rem / 8);
 	}
 
@@ -115,21 +112,10 @@
 }
 
 @layer kol-component {
-
-	input:not([type="checkbox"],
-	[type="radio"]),
+	input:not([type='checkbox'], [type='radio']),
 	select:not([multiple], [size]) {
 		height: 2.75rem;
 		border-radius: var(--border-radius);
 		border-width: var(--border-width);
 	}
-
-	/*select[multiple],
-	select:not([multiple]){
-		appearance: none;
-		option {
-			padding: calc(1rem / 2);
-			height: 1rem;
-		}
-	}*/
 }
