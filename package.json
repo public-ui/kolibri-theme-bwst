@@ -7,7 +7,7 @@
 	"scripts": {
 		"build": "rollup -c",
 		"dev": "rollup -c --watch",
-		"format": "prettier --check src",
+		"format": "prettier --check --write src",
 		"lint": "tsc --noemit && eslint src",
 		"prepack": "pnpm build",
 		"start": "npm-run-all --parallel dev serve",

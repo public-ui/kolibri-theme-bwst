@@ -110,3 +110,67 @@ Um die _Design Tokens_ anzupassen, reicht ein einfaches Stylesheet, das die gew�
 	--kolibri-color-primary-variant: #ff64b9;
 }
 ```
+
+```html
+
+<!doctype html>
+<html lang="de" dir="ltr">
+	<head>
+		<title>Code-Samples | KoliBri – Public UI</title>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Webanwendung mit der KoliBri-Komponentenbibliothek." />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="shortcut icon" type="image/x-icon" href="assets/kolibri.ico" />
+
+		<link rel="stylesheet" href="assets/codicons/codicon.css" />
+	<!---	<link rel="stylesheet" href="assets/fontawesome-free/css/all.min.css" />-->
+		<link rel="stylesheet" href="assets/noto-sans/noto-sans.css" />
+		<link rel="stylesheet" href="main.css" />
+		<meta name="robots" content="noindex" />
+		<meta name="kolibri" content="dev-mode=false;experimental-mode=true;" />
+	</head>
+	<body>
+		<div id="app"></div>
+		<script async src="main.js"></script>
+		<noscript>Diese Webseite erfordert, dass Sie JavaScript aktivieren.</noscript>
+	</body>
+</html>
+
+```
+
+### Snapshot-Tests für visuelle Änderungen
+
+Die Continuous Integration (CI)-Pipeline beinhaltet automatisierte visuelle Regressionstests mithilfe der React Sample APp.
+
+Beim Einführen visueller Änderungen am Theme werden anfänglich Testfehler erwartet. Um dies zu beheben, sollte die
+`update-snapshots.yml`-Action auf GitHub ausgeführt werden, gefolgt von einer **sorgfältigen Überprüfung** der Änderungen.
+
+Um unerwartete fehlgeschlagene visuelle Tests zu überprüfen, sind die Test-Berichte als "Artifacts" im Bereich "Summary" der Action "Update Snapshots" verfügbar.
+
+#### Snapshots aktualisieren
+
+Die folgenden Methoden können verwendet werden, um die Snapshots zu aktualisieren.
+
+1. **GitHub-Website:** Aktualisiere die Snapshots direkt auf der GitHub-Website, indem du die folgenden Schritte befolgst.
+
+- Navigiere zum `Actions`-Tab im Repository.
+- Führe die Action `Update Snapshots` aus.
+- Wähle den gewünschten Branch aus, in dem du die Snapshots aktualisieren möchtest.
+- Der Workflow checkt den Branch aus, aktualisiert alle Snapshot-Dateien und committed die Änderungen in diesen Branch.
+
+2. **Terminal-Befehl:** Verwende das [GitHub CLI (gh)](https://cli.github.com/), um die `update-snapshots.yml`-Action vom lokalen Terminal auszuführen. Diese Methode wird empfohlen, um Snapshots im aktuellen Branch zu aktualisieren, ohne zur GitHub-Website navigieren zu müssen. Für die Nutzung im Terminal muss das [GitHub CLI (gh)](https://cli.github.com/) installiert sein.
+
+- Führe den folgenden Befehl im Projektverzeichnis aus, um die Snapshots in deinem ausgecheckten Branch zu aktualisieren:
+  ```bash
+  gh workflow run update-snapshots.yml -r `git rev-parse --abbrev-ref HEAD`
+  ```
+- Wenn du alle Snapshots löschen möchtest, bevor sie neu generiert werden, füge `-f purge_snapshots=true` zum Befehl hinzu:
+  ```bash
+  gh workflow run update-snapshots.yml -r `git rev-parse --abbrev-ref HEAD` -f purge_snapshots=true
+  ```
+- Du kannst die Action auch in einem anderen Branch ausführen, indem du mit dem Flag `-r <branch_name>` einen anderen Zielbranch angibst. Zum Beispiel, um die Snapshots im `main`-Branch zu aktualisieren:
+  ```bash
+  gh workflow run update-snapshots.yml -r main
+  ```
+
+Diese Schritte stellen sicher, dass visuelle Snapshots systematisch aktualisiert werden, um die Integrität des Testprozesses zu gewährleisten.
