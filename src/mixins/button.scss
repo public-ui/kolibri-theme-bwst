@@ -1,4 +1,4 @@
-@import './focus-outline';
+@use 'focus-outline' as *;
 
 @mixin kol-button {
 	:is(a, button):focus {
