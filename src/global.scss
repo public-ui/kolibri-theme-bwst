@@ -1,3 +1,5 @@
+@use 'rem' as *;
+
 @layer kol-theme-global {
 	:root {
 		--blue: #6495ed;
@@ -7,16 +9,16 @@
 
 	:host {
 		--label-weight: 700;
-		--label-size: 0.9rem;
+		--label-size: #{rem(calc(0.9 * 16))};
 		--label-color: #000000;
-		--box-shadow-inputs: 0px 2px 8px 2px rgba(8, 35, 48, 0.24);
+		--box-shadow-inputs: #{rem(0)} #{rem(2)} #{rem(8)} #{rem(2)} rgba(8, 35, 48, 0.24);
 		--page-bg: #ffffff;
 		--element-bg: #eee;
-		--border-radius: 4px;
+		--border-radius: #{rem(4)};
 		--font-family: 'Noto Sans Regular', Arial, helvetica, sans-serif;
-		--font-size: 16px;
-		--spacing: 0.25rem;
-		--border-width: 1px;
+		--font-size: #{rem(16)};
+		--spacing: #{rem(calc(0.25 * 16))};
+		--border-width: #{rem(1)};
 		--color-primary: #156570;
 		--color-primary-light: #1a7a87;
 		--color-primary-variant: #207a8b;
@@ -31,7 +33,7 @@
 		--color-mute-variant: #bec5c9;
 		--visited: var(--color-primary-light);
 		--border-color: #ededed;
-		--a11y-min-size: 44px;
+		--a11y-min-size: #{rem(44)};
 		--button-font-weight: 400;
 	}
 
@@ -61,9 +63,9 @@
 	summary:focus {
 		cursor: pointer;
 		outline-color: var(--color-primary-variant);
-		outline-offset: 2px;
+		outline-offset: rem(2);
 		outline-style: solid;
-		outline-width: 2px;
+		outline-width: rem(2);
 		transition: outline-offset 0.2s linear;
 	}
 
@@ -87,17 +89,17 @@
 	.kol-tooltip-wc .tooltip-content {
 		border-radius: var(--border-radius);
 		line-height: 1.5;
-		padding: 0.5rem 0.75rem;
+		padding: rem(8) rem(calc(0.75 * 16));
 	}
 
 	.kol-span-wc,
-	.kol-span-wc > span {
-		gap: 0.5rem;
+	.kol-span-wc>span {
+		gap: rem(calc(0.5 * 16));
 	}
 
 	a:is(:focus, :hover):not([aria-disabled]),
 	button:is(:focus, :hover):not([disabled]) {
-		text-decoration-thickness: calc(1rem / 8);
+		text-decoration-thickness: calc(rem(calc(1 * 16)) / 8);
 	}
 
 	@keyframes spin {
@@ -112,9 +114,10 @@
 }
 
 @layer kol-component {
+
 	input:not([type='checkbox'], [type='radio']),
 	select:not([multiple], [size]) {
-		height: 2.75rem;
+		height: rem(calc(2.75 * 16));
 		border-radius: var(--border-radius);
 		border-width: var(--border-width);
 	}

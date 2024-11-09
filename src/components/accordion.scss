@@ -1,3 +1,4 @@
+@use '../rem' as *;
 @use '../mixins/focus-outline' as *;
 
 @layer kol-theme-component {
@@ -5,56 +6,56 @@
 		font-family: var(--font-family);
 	}
 
-	.kol-span-wc > span {
+	.kol-span-wc>span {
 		display: flex;
 		place-items: baseline center;
 		text-align: left;
 	}
 
-	:host > div > .kol-heading-wc button {
+	:host>div>.kol-heading-wc button {
 		border-radius: var(--border-radius);
-		min-height: 2.2rem;
-		padding: 12px 8px;
+		min-height: rem(calc(2.2 * 16));
+		padding: rem(12) rem(8);
 	}
 
-	:host > div > .kol-heading-wc button .kol-span-wc {
+	:host>div>.kol-heading-wc button .kol-span-wc {
 		font-weight: 700;
-		font-size: 1.125rem;
-		line-height: 1rem;
-		gap: 0.5rem;
+		font-size: rem(calc(1.125 * 16));
+		line-height: rem(16);
+		gap: rem(calc(0.5 * 16));
 	}
 
-	:host > div > .kol-heading-wc button .kol-span-wc > span {
+	:host>div>.kol-heading-wc button .kol-span-wc>span {
 		gap: 0.5em;
 	}
 
-	:host > div > .kol-heading-wc button .kol-icon {
+	:host>div>.kol-heading-wc button .kol-icon {
 		color: var(--color-primary);
-		font-size: 1rem;
+		font-size: rem(calc(1 * 16));
 	}
 
-	:host > div {
+	:host>div {
 		width: 100%;
 		height: 100%;
 		display: grid;
 	}
 
-	:host > div div[class='header'],
-	:host > div[class*='open'] div[class='content'] {
+	:host>div div[class='header'],
+	:host>div[class*='open'] div[class='content'] {
 		margin: 0;
 	}
 
-	:host > div div[class='content'] {
+	:host>div div[class='content'] {
 		padding-left: 2.25em;
-		padding-bottom: 12px;
-		padding-right: 8px;
+		padding-bottom: rem(12);
+		padding-right: rem(8);
 	}
 
 	button:focus {
 		outline: none;
 	}
 
-	:host > .accordion:focus-within {
+	:host>.accordion:focus-within {
 		@include focus-outline;
 		cursor: pointer;
 	}
