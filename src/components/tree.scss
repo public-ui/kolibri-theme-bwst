@@ -1,7 +1,9 @@
+@use '../rem' as *;
+
 @layer kol-theme-component {
 	.tree {
 		&:focus-within {
-			outline: 1px solid var(--color-primary);
+			outline: rem(1) solid var(--color-primary);
 		}
 	}
 }
