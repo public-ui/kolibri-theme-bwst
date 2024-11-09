@@ -1,3 +1,5 @@
+@use '../rem' as *;
+
 @layer kol-theme-component {
 	:host * {
 		hyphens: var(--hyphens);
@@ -12,7 +14,7 @@
 	}
 
 	caption {
-		padding: 0.5rem;
+		padding: rem(calc(0.5 * 16));
 	}
 
 	th {
@@ -29,13 +31,13 @@
 	}
 
 	.table {
-		padding: 0.5rem;
+		padding: rem(calc(0.5 * 16));
 
 		&:has(.focus-element:focus) {
 			outline-color: var(--color-primary-variant);
-			outline-offset: 2px;
+			outline-offset: rem(2);
 			outline-style: solid;
-			outline-width: 3px;
+			outline-width: rem(3);
 			transition: outline-offset 0.2s linear;
 		}
 	}
@@ -61,7 +63,7 @@
 	th div {
 		width: 100%;
 		display: flex;
-		gap: 0.5rem;
+		gap: rem(calc(0.5 * 16));
 		grid-template-columns: 1fr auto;
 		align-items: center;
 	}
@@ -72,7 +74,7 @@
 
 	th,
 	td {
-		padding: 0.5rem;
+		padding: rem(calc(0.5 * 16));
 	}
 
 	th[aria-sort='ascending'],

@@ -1,3 +1,5 @@
+@use '../rem' as *;
+
 @layer kol-theme-component {
 	:is(a, button) {
 		color: var(--color-primary);
@@ -13,7 +15,7 @@
 	:is(a, button):focus kol-span-wc {
 		border-radius: calc(var(--border-radius) / 2);
 		outline: var(--border-width) solid;
-		outline-offset: calc(1rem / 8);
+		outline-offset: calc(rem(calc(1 * 16)) / 8);
 	}
 
 	/*	a:hover:not([aria-disabled]),
@@ -31,7 +33,7 @@
 	}
 
 	.skip {
-		left: -99999px;
+		left: rem(-99999);
 		overflow: hidden;
 		position: absolute;
 		z-index: 9999999;
