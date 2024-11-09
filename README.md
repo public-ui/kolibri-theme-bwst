@@ -112,7 +112,6 @@ Um die _Design Tokens_ anzupassen, reicht ein einfaches Stylesheet, das die gew√
 ```
 
 ```html
-
 <!doctype html>
 <html lang="de" dir="ltr">
 	<head>
@@ -123,7 +122,7 @@ Um die _Design Tokens_ anzupassen, reicht ein einfaches Stylesheet, das die gew√
 		<link rel="shortcut icon" type="image/x-icon" href="assets/kolibri.ico" />
 
 		<link rel="stylesheet" href="assets/codicons/codicon.css" />
-	<!---	<link rel="stylesheet" href="assets/fontawesome-free/css/all.min.css" />-->
+		<!---	<link rel="stylesheet" href="assets/fontawesome-free/css/all.min.css" />-->
 		<link rel="stylesheet" href="assets/noto-sans/noto-sans.css" />
 		<link rel="stylesheet" href="main.css" />
 		<meta name="robots" content="noindex" />
@@ -135,7 +134,6 @@ Um die _Design Tokens_ anzupassen, reicht ein einfaches Stylesheet, das die gew√
 		<noscript>Diese Webseite erfordert, dass Sie JavaScript aktivieren.</noscript>
 	</body>
 </html>
-
 ```
 
 ### Snapshot-Tests f√ºr visuelle √Ñnderungen

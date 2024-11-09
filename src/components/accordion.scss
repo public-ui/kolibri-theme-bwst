@@ -1,4 +1,4 @@
-@import '../mixins/focus-outline';
+@use '../mixins/focus-outline' as *;
 
 @layer kol-theme-component {
 	:host {
