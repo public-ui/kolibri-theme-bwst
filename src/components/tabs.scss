@@ -1,3 +1,5 @@
+@use '../rem' as *;
+
 @layer kol-theme-component {
 	:host {
 		font-family: var(--font-family);
@@ -5,7 +7,7 @@
 
 	:host .kol-button-group-wc {
 		display: inline-flex;
-		gap: 0.5rem;
+		gap: rem(calc(0.5 * 16));
 		flex-wrap: wrap;
 	}
 
@@ -16,17 +18,19 @@
 		border-radius: var(--border-radius);
 		font-style: normal;
 		font-weight: 400;
-		font-size: 1rem;
-		line-height: 1.2rem;
+		font-size: rem(16);
+		line-height: rem(calc(1.2 * 16));
 		min-height: var(--a11y-min-size);
 		min-width: var(--a11y-min-size);
 		color: var(--color-subtle);
 		padding: 0;
 		transition: all 0.2s linear;
+
 		&.selected,
 		.primary {
 			color: var(--color-primary);
 		}
+
 		&.selected {
 			&:hover {
 				color: var(--color-light);
@@ -37,14 +41,14 @@
 			color: var(--color-light);
 			background-color: var(--color-primary-variant);
 			border-color: var(--color-primary-variant);
-			box-shadow: 0 2px 8px 2px rgba(8, 35, 48, 0.24);
+			box-shadow: 0 rem(2) rem(8) rem(2) rgba(8, 35, 48, 0.24);
 		}
 	}
 
 	*[tabindex]:is(.kol-button-group-wc button) {
 		//	outline: none;
 		width: 100%;
-		padding: 0 0.25rem;
+		padding: 0 rem(calc(0.25 * 16));
 		border: var(--border-width) solid transparent;
 		border-radius: var(--border-radius);
 		border-bottom-width: var(--border-width);
@@ -62,34 +66,37 @@
 		&:hover {
 			border-bottom-color: var(--color-primary);
 		}
+
 		&:before {
 			position: absolute;
 			top: 0;
 			content: '';
-			height: calc(1rem / 4);
+			height: calc(rem(calc(1 * 16)) / 4);
+
 			background-color: var(--color-primary);
-			border-top-right-radius: calc(1rem / 8);
-			border-top-left-radius: calc(1rem / 8);
+			border-top-right-radius: calc(rem(calc(1 * 16)) / 8);
+			border-top-left-radius: calc(rem(calc(1 * 16)) / 8);
 			left: 0;
 			right: 0;
 		}
+
 		&:after {
 			content: ' ';
 			background-color: var(--page-bg);
-			height: 6px;
+			height: rem(6);
 			position: absolute;
-			width: calc(100% + 10px);
-			bottom: -7px;
-			left: -5px;
+			width: calc(100% + rem(10));
+			bottom: rem(-7);
+			left: rem(-5);
 		}
 	}
 
 	button .kol-span-wc > span {
-		gap: 0.5rem;
+		gap: rem(calc(0.5 * 16));
 	}
 
 	.kol-icon {
-		font-size: 1rem;
+		font-size: rem(calc(1 * 16));
 	}
 
 	:host > div > div {
@@ -138,11 +145,11 @@
 	}
 
 	:host > .tabs-align-bottom > .kol-button-group-wc > div > div:first-child {
-		margin: 0 1rem 0 0;
+		margin: 0 rem(calc(1 * 16)) 0 0;
 	}
 
 	:host > .tabs-align-bottom > .kol-button-group-wc > div > div {
-		margin: 0 1rem;
+		margin: 0 rem(calc(1 * 16));
 	}
 
 	:host > .tabs-align-top {
@@ -159,11 +166,11 @@
 	}
 
 	:host > .tabs-align-top > .kol-button-group-wc > div > div:first-child {
-		margin: 0 1rem 0 0;
+		margin: 0 rem(calc(1 * 16)) 0 0;
 	}
 
 	:host > .tabs-align-top > .kol-button-group-wc > div > div {
-		margin: 0 1rem;
+		margin: 0 rem(calc(1 * 16));
 	}
 
 	:host > div {
@@ -212,6 +219,6 @@
 	}
 
 	:host .kol-button-group-wc {
-		border-bottom: 1px solid var(--color-primary);
+		border-bottom: rem(1) solid var(--color-primary);
 	}
 }

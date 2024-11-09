@@ -1,3 +1,5 @@
+@use '../rem' as *;
+
 @layer kol-theme-component {
 	:is(a, button) {
 		color: var(--color-primary);
@@ -14,7 +16,7 @@
 	:is(a, button):focus .kol-span-wc {
 		border-radius: calc(var(--border-radius) / 2);
 		outline: var(--border-width) solid;
-		outline-offset: calc(1rem / 8);
+		outline-offset: calc(rem(calc(1 * 16)) / 8);
 	}
 
 	:is(a, button):visited {
@@ -27,7 +29,7 @@
 	}
 
 	.skip {
-		left: -99999px;
+		left: rem(-99999);
 		overflow: hidden;
 		position: absolute;
 		z-index: 9999999;
@@ -41,7 +43,7 @@
 
 	.access-key-hint {
 		background: var(--color-mute-variant);
-		border-radius: 3px;
+		border-radius: rem(3);
 		color: var(--color-text);
 		padding: 0 0.3em;
 	}
