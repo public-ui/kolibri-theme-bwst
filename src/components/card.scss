@@ -12,8 +12,8 @@
 		height: 100%;
 		background-color: var(--color-light);
 		grid-template-rows: min-content 2fr min-content;
-		box-shadow: 0 0 rem(calc(0.25 * 16)) var(--color-subtle);
 		border-radius: var(--border-radius);
+		border: rem(1) solid var(--color-subtle);
 	}
 
 	:host .kol-heading-wc {
