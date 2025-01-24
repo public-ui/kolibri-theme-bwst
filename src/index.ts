@@ -11,6 +11,7 @@ import buttonGroupCss from './components/button-group.scss';
 import buttonLinkCss from './components/button-link.scss';
 import cardCss from './components/card.scss';
 import detailsCss from './components/details.scss';
+import formCss from './components/form.scss';
 import headingCss from './components/heading.scss';
 import iconCss from './components/icon.scss';
 import indentedTextCss from './components/indented-text.scss';
@@ -39,8 +40,8 @@ import tableStatelessCss from './components/table-stateless.scss';
 import tabsCss from './components/tabs.scss';
 import textareaCss from './components/textarea.scss';
 import toastContainerCss from './components/toast-container.scss';
-import treeItemCss from './components/tree-item.scss';
 import treeCss from './components/tree.scss';
+import treeItemCss from './components/tree-item.scss';
 
 export const BWSt = KoliBri.createTheme('bwst', {
 	GLOBAL: globalCss,
@@ -55,6 +56,7 @@ export const BWSt = KoliBri.createTheme('bwst', {
 	'KOL-BUTTON-LINK': buttonLinkCss,
 	'KOL-CARD': cardCss,
 	'KOL-DETAILS': detailsCss,
+	'KOL-FORM': formCss,
 	'KOL-HEADING': headingCss,
 	'KOL-ICON': iconCss,
 	'KOL-INDENTED-TEXT': indentedTextCss,
