@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  '@public-ui/components': 2.2.4
+
 importers:
 
   .:
@@ -19,7 +22,7 @@ importers:
         version: 2.2.4(adopted-style-sheets@1.1.7)
       '@public-ui/visual-tests':
         specifier: 2.1.4
-        version: 2.1.4(esbuild@0.20.2)(eslint@9.15.0(jiti@2.4.0))(less@4.2.0)(playwright@1.49.1)(postcss@8.4.49)(rollup@4.27.3)(sass@1.81.0)(webpack@5.91.0)
+        version: 2.1.4(adopted-style-sheets@1.1.7)(esbuild@0.20.2)(eslint@9.15.0(jiti@2.4.0))(less@4.2.0)(playwright@1.49.1)(postcss@8.4.49)(rollup@4.27.3)(sass@1.81.0)(webpack@5.91.0)
       '@rollup/plugin-commonjs':
         specifier: 28.0.1
         version: 28.0.1(rollup@4.27.3)
@@ -678,9 +681,6 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  '@public-ui/components@2.1.4':
-    resolution: {integrity: sha512-HE9TDg/IKDzy1oDZqsebCxNzS6kpe7yqgWBDP1eViwFLxetf/ijhpOVZjUnjjt7R6KSToknWE5ZGJsvkBjGiZQ==}
-
   '@public-ui/components@2.2.4':
     resolution: {integrity: sha512-L5Wb8Z+LW9ipYmQwiA8Osozca67SlGrbq9F6/z3IYB3/jxD42ToHrIX8ZkKF+5EO0apr4OX6eSm/ZJXRw7GBow==}
     peerDependencies:
@@ -689,7 +689,7 @@ packages:
   '@public-ui/react@2.1.4':
     resolution: {integrity: sha512-2XNtd5t6NoMVT8ZhPCPMoZq5H7AcVPI9TJQqANt21860tWg4O6oM0UYzTSKKviYj9kPi1zsdqniOihE9mDkYsw==}
     peerDependencies:
-      '@public-ui/components': 2.1.4
+      '@public-ui/components': 2.2.4
       react: '>=16.14.0'
       react-dom: '>=16.14.0'
 
@@ -699,7 +699,7 @@ packages:
   '@public-ui/themes@2.1.4':
     resolution: {integrity: sha512-mSnnMx151545Nf+PFADt8dm8PlkK56wj79qBlzTdlRShFcXpKNVHix/YxnXmw0x5PX4Zu/+yEMtq0UMmJFGfmg==}
     peerDependencies:
-      '@public-ui/components': 2.1.4
+      '@public-ui/components': 2.2.4
 
   '@public-ui/visual-tests@2.1.4':
     resolution: {integrity: sha512-o8HdkxwNhFyTvD5Z5xcHNHuqMqD628J9XYiKdUNIYQazHKFADQwv0odyv5YN+f1RMsjbrvFzsXV0BhnTZaw7SQ==}
@@ -6069,26 +6069,24 @@ snapshots:
     dependencies:
       playwright: 1.45.0
 
-  '@public-ui/components@2.1.4': {}
-
   '@public-ui/components@2.2.4(adopted-style-sheets@1.1.7)':
     dependencies:
       adopted-style-sheets: 1.1.7
 
-  '@public-ui/react@2.1.4(@public-ui/components@2.1.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@public-ui/react@2.1.4(@public-ui/components@2.2.4(adopted-style-sheets@1.1.7))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@public-ui/components': 2.1.4
+      '@public-ui/components': 2.2.4(adopted-style-sheets@1.1.7)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@public-ui/sample-react@2.1.4(esbuild@0.20.2)(eslint@9.15.0(jiti@2.4.0))(less@4.2.0)(postcss@8.4.49)(rollup@4.27.3)(sass@1.81.0)(webpack@5.91.0)':
+  '@public-ui/sample-react@2.1.4(adopted-style-sheets@1.1.7)(esbuild@0.20.2)(eslint@9.15.0(jiti@2.4.0))(less@4.2.0)(postcss@8.4.49)(rollup@4.27.3)(sass@1.81.0)(webpack@5.91.0)':
     dependencies:
       '@leanup/stack': 1.3.54(chromedriver@124.0.4)(esbuild@0.20.2)(typescript@5.6.3)
       '@leanup/stack-react': 1.3.54(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@leanup/stack-webpack': 1.3.54(@leanup/stack@1.3.54(chromedriver@124.0.4)(esbuild@0.20.2)(typescript@5.5.2))(esbuild@0.20.2)(less@4.2.0)(postcss@8.4.49)(sass@1.81.0)
-      '@public-ui/components': 2.1.4
-      '@public-ui/react': 2.1.4(@public-ui/components@2.1.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@public-ui/themes': 2.1.4(@public-ui/components@2.1.4)
+      '@public-ui/components': 2.2.4(adopted-style-sheets@1.1.7)
+      '@public-ui/react': 2.1.4(@public-ui/components@2.2.4(adopted-style-sheets@1.1.7))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@public-ui/themes': 2.1.4(@public-ui/components@2.2.4(adopted-style-sheets@1.1.7))
       '@types/node': 22.10.10
       '@types/react': 18.3.3
       '@types/react-dom': 18.3.0
@@ -6117,6 +6115,7 @@ snapshots:
       - '@swc/helpers'
       - '@webpack-cli/generators'
       - '@webpack-cli/migrate'
+      - adopted-style-sheets
       - bufferutil
       - canvas
       - debug
@@ -6136,14 +6135,14 @@ snapshots:
       - webpack
       - webpack-bundle-analyzer
 
-  '@public-ui/themes@2.1.4(@public-ui/components@2.1.4)':
+  '@public-ui/themes@2.1.4(@public-ui/components@2.2.4(adopted-style-sheets@1.1.7))':
     dependencies:
-      '@public-ui/components': 2.1.4
+      '@public-ui/components': 2.2.4(adopted-style-sheets@1.1.7)
 
-  '@public-ui/visual-tests@2.1.4(esbuild@0.20.2)(eslint@9.15.0(jiti@2.4.0))(less@4.2.0)(playwright@1.49.1)(postcss@8.4.49)(rollup@4.27.3)(sass@1.81.0)(webpack@5.91.0)':
+  '@public-ui/visual-tests@2.1.4(adopted-style-sheets@1.1.7)(esbuild@0.20.2)(eslint@9.15.0(jiti@2.4.0))(less@4.2.0)(playwright@1.49.1)(postcss@8.4.49)(rollup@4.27.3)(sass@1.81.0)(webpack@5.91.0)':
     dependencies:
       '@playwright/test': 1.45.0
-      '@public-ui/sample-react': 2.1.4(esbuild@0.20.2)(eslint@9.15.0(jiti@2.4.0))(less@4.2.0)(postcss@8.4.49)(rollup@4.27.3)(sass@1.81.0)(webpack@5.91.0)
+      '@public-ui/sample-react': 2.1.4(adopted-style-sheets@1.1.7)(esbuild@0.20.2)(eslint@9.15.0(jiti@2.4.0))(less@4.2.0)(postcss@8.4.49)(rollup@4.27.3)(sass@1.81.0)(webpack@5.91.0)
       axe-playwright: 2.0.1(playwright@1.49.1)
       portfinder: 1.0.32
       serve: 14.2.3
@@ -6153,6 +6152,7 @@ snapshots:
       - '@swc/helpers'
       - '@webpack-cli/generators'
       - '@webpack-cli/migrate'
+      - adopted-style-sheets
       - bufferutil
       - canvas
       - debug
