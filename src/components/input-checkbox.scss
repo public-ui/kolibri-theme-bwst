@@ -22,10 +22,16 @@
 		width: 100%;
 		min-height: var(--a11y-min-size);
 		gap: rem(calc(0.4 * 16));
+		grid-template-areas: unset;
 
 		.hint {
 			font-size: rem(calc(0.9 * 16));
 		}
+	}
+
+	.input,
+	.input-label {
+		grid-area: unset;
 	}
 
 	:host .kol-input.default {
@@ -48,11 +54,6 @@
 		display: inherit;
 		min-height: var(--a11y-min-size);
 		order: 2;
-		grid-row: 2;
-	}
-
-	.input-label {
-		grid-row: 2;
 	}
 
 	:host .kol-input > div.input input {
@@ -71,7 +72,6 @@
 	:host .kol-input > .kol-alert-wc.error {
 		order: 1;
 		padding-top: calc(var(--spacing) / 2);
-		grid-row: 1;
 		grid-column: span 2;
 	}
 
@@ -92,7 +92,6 @@
 
 	:host input {
 		cursor: pointer;
-		order: 1;
 		width: 100%;
 		border-color: var(--color-subtle);
 		border-width: rem(2);

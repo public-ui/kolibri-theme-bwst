@@ -7,11 +7,8 @@
 	@include kol-alert-theme;
 	@include kol-link;
 
-	:host {
-		font-family: var(--font-family);
-	}
-
 	.mandatory-fields-hint {
+		font-family: var(--font-family);
 		@include indented-text;
 	}
 }
