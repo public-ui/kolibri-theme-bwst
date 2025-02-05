@@ -22,20 +22,20 @@
 		width: 100%;
 		min-height: var(--a11y-min-size);
 		gap: rem(calc(0.4 * 16));
-		grid-template-areas: unset;
 
 		.hint {
 			font-size: rem(calc(0.9 * 16));
 		}
 	}
 
-	.input,
-	.input-label {
-		grid-area: unset;
-	}
-
 	:host .kol-input.default {
 		grid-template-columns: rem(calc(1.5 * 16)) auto;
+		grid-template-areas: unset;
+
+		.input,
+		.input-label {
+			grid-area: unset;
+		}
 	}
 
 	:host .kol-input.switch {
