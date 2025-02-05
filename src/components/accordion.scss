@@ -41,4 +41,8 @@
 	:host > .accordion:focus-within {
 		@include focus-outline;
 	}
+
+	.icon {
+		color: var(--color-primary);
+	}
 }

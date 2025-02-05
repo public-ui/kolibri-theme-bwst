@@ -28,7 +28,7 @@
 		}
 	}
 
-	:host .kol-input.default {
+	:host .kol-input:is(.default, .switch) {
 		grid-template-columns: rem(calc(1.5 * 16)) auto;
 		grid-template-areas: unset;
 
