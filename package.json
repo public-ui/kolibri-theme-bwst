@@ -24,7 +24,7 @@
 		"@eslint/eslintrc": "3.2.0",
 		"@eslint/js": "9.15.0",
 		"@public-ui/components": "2.2.5",
-		"@public-ui/visual-tests": "2.1.4",
+		"@public-ui/visual-tests": "2.2.5",
 		"@rollup/plugin-commonjs": "28.0.1",
 		"@rollup/plugin-node-resolve": "15.3.0",
 		"@rollup/plugin-typescript": "12.1.1",
@@ -61,8 +61,5 @@
 	],
 	"engines": {
 		"pnpm": "^9"
-	},
-	"resolutions": {
-		"@public-ui/components": "2.2.5"
 	}
 }
