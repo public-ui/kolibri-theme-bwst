@@ -1,6 +1,9 @@
 @use '../rem' as *;
+@use '../mixins/alert-wc' as *;
 
 @layer kol-theme-component {
+	@include kol-alert-theme;
+
 	:host {
 		top: rem(calc(1 * 16));
 		right: rem(calc(1 * 16));
