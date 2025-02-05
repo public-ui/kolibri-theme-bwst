@@ -10,6 +10,7 @@ import buttonCss from './components/button.scss';
 import buttonGroupCss from './components/button-group.scss';
 import buttonLinkCss from './components/button-link.scss';
 import cardCss from './components/card.scss';
+import comboboxCss from './components/combobox.scss';
 import detailsCss from './components/details.scss';
 import formCss from './components/form.scss';
 import headingCss from './components/heading.scss';
@@ -33,6 +34,7 @@ import navCss from './components/nav.scss';
 import paginationCss from './components/pagination.scss';
 import progressCss from './components/progress.scss';
 import selectCss from './components/select.scss';
+import singleSelectCss from './components/single-select.scss';
 import skipNavCss from './components/skip-nav.scss';
 import spinCss from './components/spin.scss';
 import splitButtonCss from './components/split-button.scss';
@@ -56,6 +58,7 @@ export const BWSt = KoliBri.createTheme('bwst', {
 	'KOL-BUTTON-GROUP': buttonGroupCss,
 	'KOL-BUTTON-LINK': buttonLinkCss,
 	'KOL-CARD': cardCss,
+	'KOL-COMBOBOX': comboboxCss,
 	'KOL-DETAILS': detailsCss,
 	'KOL-FORM': formCss,
 	'KOL-HEADING': headingCss,
@@ -79,6 +82,7 @@ export const BWSt = KoliBri.createTheme('bwst', {
 	'KOL-PAGINATION': paginationCss,
 	'KOL-PROGRESS': progressCss,
 	'KOL-SELECT': selectCss,
+	'KOL-SINGLE-SELECT': singleSelectCss,
 	'KOL-SKIP-NAV': skipNavCss,
 	'KOL-SPIN': spinCss,
 	'KOL-SPLIT-BUTTON': splitButtonCss,
