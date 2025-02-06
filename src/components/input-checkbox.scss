@@ -1,6 +1,7 @@
 @use '../rem' as *;
 @use '../mixins/focus-outline' as *;
 @use '../mixins/alert-wc' as *;
+@use '../mixins/typography' as *;
 
 @layer kol-theme-component {
 	:host {
@@ -24,12 +25,18 @@
 		gap: rem(calc(0.4 * 16));
 
 		.hint {
-			font-size: rem(calc(0.9 * 16));
+			@include kol-typography-hint;
 		}
 	}
 
-	:host .kol-input.default {
+	:host .kol-input:is(.default, .switch) {
 		grid-template-columns: rem(calc(1.5 * 16)) auto;
+		grid-template-areas: unset;
+
+		.input,
+		.input-label {
+			grid-area: unset;
+		}
 	}
 
 	:host .kol-input.switch {
@@ -66,7 +73,7 @@
 	:host .kol-input > .kol-alert-wc.error {
 		order: 1;
 		padding-top: calc(var(--spacing) / 2);
-		grid-column: span 2 / auto;
+		grid-column: span 2;
 	}
 
 	:host .kol-input.error {
@@ -86,7 +93,6 @@
 
 	:host input {
 		cursor: pointer;
-		order: 1;
 		width: 100%;
 		border-color: var(--color-subtle);
 		border-width: rem(2);

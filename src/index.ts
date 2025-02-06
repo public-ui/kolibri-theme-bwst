@@ -10,7 +10,9 @@ import buttonCss from './components/button.scss';
 import buttonGroupCss from './components/button-group.scss';
 import buttonLinkCss from './components/button-link.scss';
 import cardCss from './components/card.scss';
+import comboboxCss from './components/combobox.scss';
 import detailsCss from './components/details.scss';
+import formCss from './components/form.scss';
 import headingCss from './components/heading.scss';
 import iconCss from './components/icon.scss';
 import indentedTextCss from './components/indented-text.scss';
@@ -32,15 +34,17 @@ import navCss from './components/nav.scss';
 import paginationCss from './components/pagination.scss';
 import progressCss from './components/progress.scss';
 import selectCss from './components/select.scss';
+import singleSelectCss from './components/single-select.scss';
 import skipNavCss from './components/skip-nav.scss';
+import spinCss from './components/spin.scss';
 import splitButtonCss from './components/split-button.scss';
 import tableStatefulCss from './components/table-stateful.scss';
 import tableStatelessCss from './components/table-stateless.scss';
 import tabsCss from './components/tabs.scss';
 import textareaCss from './components/textarea.scss';
 import toastContainerCss from './components/toast-container.scss';
-import treeItemCss from './components/tree-item.scss';
 import treeCss from './components/tree.scss';
+import treeItemCss from './components/tree-item.scss';
 
 export const BWSt = KoliBri.createTheme('bwst', {
 	GLOBAL: globalCss,
@@ -54,7 +58,9 @@ export const BWSt = KoliBri.createTheme('bwst', {
 	'KOL-BUTTON-GROUP': buttonGroupCss,
 	'KOL-BUTTON-LINK': buttonLinkCss,
 	'KOL-CARD': cardCss,
+	'KOL-COMBOBOX': comboboxCss,
 	'KOL-DETAILS': detailsCss,
+	'KOL-FORM': formCss,
 	'KOL-HEADING': headingCss,
 	'KOL-ICON': iconCss,
 	'KOL-INDENTED-TEXT': indentedTextCss,
@@ -76,7 +82,9 @@ export const BWSt = KoliBri.createTheme('bwst', {
 	'KOL-PAGINATION': paginationCss,
 	'KOL-PROGRESS': progressCss,
 	'KOL-SELECT': selectCss,
+	'KOL-SINGLE-SELECT': singleSelectCss,
 	'KOL-SKIP-NAV': skipNavCss,
+	'KOL-SPIN': spinCss,
 	'KOL-SPLIT-BUTTON': splitButtonCss,
 	'KOL-TABLE-STATEFUL': tableStatefulCss,
 	'KOL-TABLE-STATELESS': tableStatelessCss,

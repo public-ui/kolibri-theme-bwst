@@ -1,5 +1,7 @@
 @use '../rem' as *;
 @use '../mixins/alert-wc' as *;
+@use '../mixins/input-error' as *;
+@use '../mixins/typography' as *;
 
 @layer kol-theme-component {
 	:host {
@@ -31,8 +33,7 @@
 
 	.kol-input .hint {
 		order: 4;
-		font-size: rem(calc(0.9 * 16));
-		font-style: italic;
+		@include kol-typography-hint;
 	}
 
 	input::placeholder {
@@ -83,17 +84,8 @@
 		padding-left: 0.125em;
 	}
 
-	.kol-input.error {
-		border-left: rem(3) solid var(--color-danger);
-		padding-left: rem(calc(1 * 16));
-	}
-
-	.kol-input.error .input:focus-within {
-		outline-color: var(--color-danger) !important;
-	}
-
-	.kol-input.error .kol-alert-wc.error {
-		@include kol-input-error-with-kol-alert-wc-error(--color-danger);
+	.kol-input.error:not(.hidden-error) {
+		@include input-error;
 	}
 
 	.kol-input.disabled .input {
